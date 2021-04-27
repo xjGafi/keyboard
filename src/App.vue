@@ -108,11 +108,12 @@
        * @return {*}
        */
       inputFocus() {
-        navigator.userAgent.match(
-          /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
-        )
-          ? this.$refs.input.dispatchEvent(new MouseEvent('focus'))
-          : this.$refs.input.focus();
+        this.$refs.input.dispatchEvent(new MouseEvent('focus'));
+        // navigator.userAgent.match(
+        //   /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+        // )
+        //   ? this.$refs.input.dispatchEvent(new MouseEvent('focus'))
+        //   : this.$refs.input.focus();
         // console.log(
         //   '🚀 ~ file: App.vue ~ line 189 ~ inputFocus ~ this.$refs.input',
         //   this.$refs.input
@@ -178,12 +179,12 @@
 
   .input {
     input {
-      // display: none;
-      position: absolute;
-      top: -100%;
-      left: -100%;
-      z-index: -100;
-      opacity: 0;
+      display: none;
+      // position: absolute;
+      // top: -100%;
+      // left: -100%;
+      // z-index: -100;
+      // opacity: 0;
     }
 
     .question {
